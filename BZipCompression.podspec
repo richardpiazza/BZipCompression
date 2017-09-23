@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
-  s.name = "BZipCompression"
-  s.version = "1.0.2"
+  s.name = "BZipper"
+  s.version = "1.0.3"
   s.summary = "A fork of BZipCompression with support for more platforms."
   s.description = <<-DESC
   An update of BZipCompression that adds all Apple deployment targets and support for SPM.
@@ -15,6 +15,7 @@ Pod::Spec.new do |s|
   s.frameworks = 'Foundation'
   s.library = 'bz2'
   s.requires_arc = true
+  s.module_name = 'BZipCompression'
 
   s.osx.deployment_target = "10.13"
   s.ios.deployment_target = "11.0"
