@@ -1,4 +1,0 @@
-module BZipCompression {
-    umbrella header "/Users/richardpiazza/Desktop/BZipCompression/Sources/BZipCompression/include/BZipCompression.h"
-    export *
-}
