@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   An update of BZipCompression that adds all Apple deployment targets and support for SPM.
                      DESC
   s.homepage = "https://github.com/richardpiazza/BZipCompression"
-  s.license = 'Apache'
+  s.license = 'Apache License, Version 2.0'
   s.author = { "Richard Piazza" => "github@richardpiazza.com" }
   s.social_media_url = 'https://twitter.com/richardpiazza'
 
