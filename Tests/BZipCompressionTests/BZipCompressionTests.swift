@@ -3,28 +3,28 @@ import XCTest
 
 class BZipCompressionTests: XCTestCase {
     
-    var coverageResource: URL {
+    public func url(forResource resource: String) -> URL {
+        let bundle = Bundle(for: type(of: self))
+        if let url = bundle.url(forResource: resource, withExtension: "bz2") {
+            return url
+        }
+        
         let path = FileManager.default.currentDirectoryPath
-        let url = URL(fileURLWithPath: path).appendingPathComponent("Tests").appendingPathComponent("BZipCompressionTests").appendingPathComponent("coverage.bz2")
+        let url = URL(fileURLWithPath: path).appendingPathComponent("Tests").appendingPathComponent("BZipCompressionTests").appendingPathComponent(resource).appendingPathExtension("bz2")
+        
+        if !FileManager.default.fileExists(atPath: url.path) {
+            fatalError("Failed to locate resource \(resource).bz2")
+        }
+        
         return url
     }
     
-    func testLocalPath() {
-        let url = self.coverageResource
-        print(url)
-        XCTAssertTrue(url.lastPathComponent == "coverage.bz2")
-    }
-    
     func testDecompression() {
-//        let bundle = Bundle(for: BZipCompressionTests.self)
-//        guard let url = bundle.url(forResource: "coverage", withExtension: "bz2") else {
-//            XCTFail("Failed to locate resource.")
-//            return
-//        }
+        let url = self.url(forResource: "coverage")
         
         let data: Data
         do {
-            data = try Data(contentsOf: self.coverageResource)
+            data = try Data(contentsOf: url)
         } catch {
             XCTFail(error.localizedDescription)
             return

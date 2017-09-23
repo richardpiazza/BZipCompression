@@ -22,6 +22,7 @@
 
 /* Begin PBXBuildFile section */
 		E19AE3971F768F3D0040CE07 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E19AE3961F768F3D0040CE07 /* libbz2.tbd */; };
+		E19AE39E1F769BEB0040CE07 /* coverage.bz2 in Resources */ = {isa = PBXBuildFile; fileRef = E19AE39D1F769BDA0040CE07 /* coverage.bz2 */; };
 		OBJ_25 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_31 /* BZipCompressionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* BZipCompressionTests.swift */; };
 		OBJ_33 /* BZipCompression.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "BZipCompression::BZipCompression::Product" /* BZipCompression.framework */; };
@@ -49,8 +50,8 @@
 		"BZipCompression::BZipCompression::Product" /* BZipCompression.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BZipCompression.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"BZipCompression::BZipCompressionTests::Product" /* BZipCompressionTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = BZipCompressionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E19AE3961F768F3D0040CE07 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
+		E19AE39D1F769BDA0040CE07 /* coverage.bz2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = coverage.bz2; sourceTree = "<group>"; };
 		OBJ_11 /* BZipCompression.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BZipCompression.h; sourceTree = "<group>"; };
-		OBJ_12 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; name = module.modulemap; path = /Users/richardpiazza/Desktop/BZipCompression/BZipCompression.xcodeproj/GeneratedModuleMap/BZipCompression/module.modulemap; sourceTree = "<group>"; };
 		OBJ_15 /* BZipCompressionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BZipCompressionTests.swift; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		OBJ_9 /* BZipCompression.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BZipCompression.m; sourceTree = "<group>"; };
@@ -88,7 +89,6 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_11 /* BZipCompression.h */,
-				OBJ_12 /* module.modulemap */,
 			);
 			path = include;
 			sourceTree = "<group>";
@@ -104,6 +104,7 @@
 		OBJ_14 /* BZipCompressionTests */ = {
 			isa = PBXGroup;
 			children = (
+				E19AE39D1F769BDA0040CE07 /* coverage.bz2 */,
 				OBJ_15 /* BZipCompressionTests.swift */,
 			);
 			name = BZipCompressionTests;
@@ -240,6 +241,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E19AE39E1F769BEB0040CE07 /* coverage.bz2 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
