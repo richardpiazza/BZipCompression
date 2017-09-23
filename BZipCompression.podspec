@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = "BZipCompression"
-  s.version = "1.0.1"
+  s.version = "1.0.2"
   s.summary = "A fork of BZipCompression with support for more platforms."
   s.description = <<-DESC
   An update of BZipCompression that adds all Apple deployment targets and support for SPM.
@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.social_media_url = 'https://twitter.com/richardpiazza'
 
   s.source = { :git => "https://github.com/richardpiazza/BZipCompression.git", :tag => s.version.to_s }
-  s.source_files = 'Sources/*'
+  s.source_files = 'Sources/BZipCompression/include/*.h', 'Sources/BZipCompression/*.m'
   s.frameworks = 'Foundation'
   s.library = 'bz2'
   s.requires_arc = true
