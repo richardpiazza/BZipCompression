@@ -1,4 +1,4 @@
-// swift-tools-version:4.0
+// swift-tools-version:5.0
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -14,5 +14,6 @@ let package = Package(
     targets: [
         .target(name: "BZipCompression", dependencies: []),
         .testTarget(name: "BZipCompressionTests", dependencies: ["BZipCompression"]),
-    ]
+    ],
+    swiftLanguageVersions: [.v4, .v4_2, .v5]
 )
